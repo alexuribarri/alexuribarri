@@ -13,7 +13,7 @@ export function header() {
   // Add links to nav
   nav.innerHTML = `
   <a href="/">Home</a>
-  <a href="./static/html/about.html">About</a>
+  <a href="./#about">About</a>
 `;
 
   // Insert nav after h1

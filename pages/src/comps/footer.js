@@ -12,6 +12,7 @@ export function footer() {
 
   // Create back to top link
   const backToTop = document.createElement("p");
+  backToTop.innerHTML = '<a href="#top">Back to Top</a>';
 
   // Create author
   const author = document.createElement("p");
@@ -19,6 +20,7 @@ export function footer() {
 
   // Append elements to footer
   footer.appendChild(socialLinks);
+  footer.appendChild(backToTop);
 
   footer.appendChild(author);
 }

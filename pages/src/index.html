@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="style.css" />
 
     <title>Alex Uribarri personal website</title>
@@ -13,16 +13,20 @@
     </header>
 
     <main>
-      <img
-        src="./static/img/oldpc.jpg"
-        width="200px"
-        height="160px"
-        alt="a boy with a PC"
-      />
-      <p>
-        This website is an attempt to go back to the origins of the web, to it's
-        simplest form, but now using modern technologies like serverless.
-      </p>
+      <div id="first-parag">
+        <img
+          src="./static/img/oldpc.jpg"
+          width="200px"
+          height="160px"
+          alt="a boy with a PC"
+        />
+        <p>
+          This website is an attempt to go back to the origins of the web, to
+          it's simplest form, old web aesthetics and no frameworks or libraries
+          whatsoever. A sort of artisan development.
+        </p>
+      </div>
+
       <p>
         I built my first website back in 2002 through the only user-friendly
         option available back then -
@@ -41,21 +45,68 @@
       <p>
         I think it is time to build something of my own. Static, serverless, but
         built by myself. Without any libraries, using vanilla Javascript. A year
-        ago I would consider this unachivable, but today, thanks to many tools
-        available for junior developers as I am, I think it is possible. I will
-        be using Amazon Q and Amazon CodeWhisperer for guidance. Ideally this
-        site will have a backend for article publishing and maybe some comments
-        feature.
+        ago I would consider this unachivable due to my poor developer skills,
+        but today, thanks to many tools available for junior developers, I think
+        it is possible. I will be using Amazon Q and Amazon CodeWhisperer for
+        guidance. Ideally this site will have a backend for article publishing
+        and maybe some comments feature.
       </p>
       <p>
         If the project will be worth it, I'll make the code public on my Github
-        repo so you could build it on your own as well.
+        so you could build it on your own as well. In line with the the early
+        internet philosophy, the idea is to build this site as frugal as
+        possible (free, to be precise). Thefore, the services will be chosen
+        with this idea in mind, free and no credit card requirment.
       </p>
+      <p>Current tech stack:</p>
+      <ul>
+        <li>Domain registration: Amazon Route 53 - 12$/year</li>
+        <li>
+          Development assistance, generative AI: Amazon Q, Amazon CodeWhisperer.
+          Free. No credit card required
+        </li>
+        <li>
+          Integrated Development Environment (IDE): Visual Studio Code. Free. No
+          credit card required
+        </li>
+        <li>
+          Named servers and DNS: Cloudflare. Free. No credit card required
+        </li>
+        <li>
+          Static web hosting: Cloudflare Pages. Free. No credit card required
+        </li>
+        <li>
+          Git management: GitHub private repository. Free. No credit card
+          required
+        </li>
+        <li>
+          Serverless functions (compute). Cloudflare Workers. Free. No credit
+          card required
+        </li>
+        <li>Database: Cloudflare Workers KV. Free. No credit card required</li>
+        <li>
+          Backend programming language: Node.js Free. No credit card required
+        </li>
+      </ul>
       <p>
         With kindest regards, <br />
         Alex Uribarri<br />
         December 3rd, 2023
       </p>
+
+      <h2 id="about">About</h2>
+      <p>
+        This is strictly personal website. All opinions in this website are of
+        the author. This website is for personal leasure and learning purposes
+        only and should not be taken seriously in any way. Just have fun, enjoy
+        and take everything written here with enrormous grain of salt.
+      </p>
+
+      <p>
+        You can reach me via LinkedIn profile referenced in the footer of this
+        page.
+      </p>
+      <a href="#top">Back to Top</a>
     </main>
 
     <footer></footer>
