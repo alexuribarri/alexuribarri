@@ -4,7 +4,7 @@ body {
 }
 
 main {
-  width: 900px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -19,4 +19,12 @@ h1 {
 
 footer {
   background-color: lightgray;
+}
+
+#first-parag {
+  display: flex;
+}
+
+#first-parag img {
+  margin-right: 10px;
 }
