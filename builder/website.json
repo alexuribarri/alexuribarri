@@ -2,5 +2,6 @@
   "title": "Alex's Uribarri personal website",
   "style": "./style.css",
   "meta-name": "Alex's Uribarri personal website",
-  "meta-content": "Personal website I'm building from scratch to improve my developer skills"
+  "meta-content": "Personal website I'm building from scratch to improve my developer skills",
+  "author": "Alex Uribarri"
 }

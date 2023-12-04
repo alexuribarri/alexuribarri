@@ -14,6 +14,7 @@ export function header() {
   nav.innerHTML = `
   <a href="/">Home</a>
   <a href="./#about">About</a>
+  <a href="./#updates">Updates<a>
 `;
 
   // Insert nav after h1
