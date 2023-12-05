@@ -1,9 +1,12 @@
-//import { assert } from "console";
 import main from "../menus/main.json" assert { type: "json" };
 
 export function header(siteName) {
-  console.log(typeof main.main);
   let html = `
+
+  <div class="logo">
+  <p>${siteName} - Dev Env</p>
+</div>
+
     <ul>
   `;
 
