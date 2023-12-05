@@ -1,17 +1,21 @@
-export function header() {
-  const html = `<header>
-  <div class="logo">
-    <p>Dev Environment</p>
-  </div>
-  <nav>
+//import { assert } from "console";
+import main from "../menus/main.json" assert { type: "json" };
+
+export function header(siteName) {
+  console.log(typeof main.main);
+  let html = `
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li> 
-      <li><a href="#">Contact</a></li>
+  `;
+
+  for (let item of main.main) {
+    html += `
+      <li><a href="${item.url}">${item.name}</a></li>
+    `;
+  }
+
+  html += `
     </ul>
-  </nav>
-</header>
-`;
+  `;
+
   return html;
 }
