@@ -1,3 +1,7 @@
+---
+{ "path": "./blog/", "categories": "main" }
+---
+
 # Hello
 
 ## Heading 2
@@ -10,4 +14,4 @@ Text goes here
 - [x] Try something
 - [ ] Experience something
 
-<img src="../../pages/src/static/img/oldpc.jpg" width="500" height="150">
+<img src="../../pages/src/static/img/oldpc.jpg" max-width="500" height="150">

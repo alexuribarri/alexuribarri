@@ -1,11 +1,21 @@
 export function header() {
   //website name (h1 element)
-  let siteName = document.querySelector("header h1");
-  siteName.textContent = "Alex's Uribarri personal website";
+  // let siteName = document.querySelector("header h1");
+  // siteName.textContent = "Alex's Uribarri personal website";
   //creating navigation elements
   // Select header and h1
   const header = document.querySelector("header");
-  const h1 = header.querySelector("h1");
+  //const h1 = header.querySelector("h1");
+
+  const headerWrapper = document.createElement("div");
+  headerWrapper.className = "header-wrapper";
+
+  const logo = document.createElement("div");
+  logo.className = "logo";
+  logo.innerHTML = `<p>Alex's</p>`;
+
+  header.insertAdjacentElement("afterbegin", headerWrapper);
+  headerWrapper.insertAdjacentElement("afterbegin", logo);
 
   // Create nav
   const nav = document.createElement("nav");
@@ -18,5 +28,5 @@ export function header() {
 `;
 
   // Insert nav after h1
-  h1.insertAdjacentElement("afterend", nav);
+  logo.insertAdjacentElement("afterend", nav);
 }

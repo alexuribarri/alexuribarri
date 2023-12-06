@@ -6,8 +6,9 @@ import { header } from "./comp/header.mjs";
 // Import config.json file with 'json' type
 import config from "./config.json" assert { type: "json" };
 
-const content = head() + header(config.title) + main() + footer();
-
-const location = "../pages/dev/";
-const filename = "index.html";
-writer(content, location, filename);
+export function builder(meta, html) {
+  const content = head() + header(config.title) + main() + footer();
+  const location = meta.path;
+  const filename = "index.html";
+  writer(content, location, filename);
+}

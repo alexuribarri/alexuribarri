@@ -1,7 +1,7 @@
 //this function changes the title
 export function changeHead() {
-  let newTitle = document.querySelector("h1").textContent;
-  document.title = newTitle;
+  // let newTitle = document.querySelector("h1").textContent;
+  // document.title = newTitle;
 
   //adding Meta description
   const head = document.head;

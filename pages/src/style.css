@@ -10,15 +10,37 @@ main {
 
 header {
   margin-bottom: 10px;
-  background-color: lightgray;
+  background-color: gray;
 }
 
-h1 {
-  margin-top: 0;
+.header-wrapper {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.logo p {
+  font-size: 2em;
+  margin: 0px;
+  font-weight: bold;
+  color: lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav a {
+  color: lightgray;
+  text-decoration: none;
 }
 
 footer {
-  background-color: lightgray;
+  background-color: gray;
+}
+
+footer li {
+  color: lightgray;
+  list-style-type: none;
+}
+footer a {
+  color: lightgray;
+  text-decoration: none;
 }
 
 #first-parag {
