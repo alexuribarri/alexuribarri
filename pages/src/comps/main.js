@@ -2,12 +2,7 @@ export function main() {
   const mainHtml = document.querySelector("main");
   mainHtml.innerHTML = `      <h2>Welcome</h2>
   <div id="first-parag">
-    <img
-      src="./static/img/oldpc.jpg"
-      width="200px"
-      height="160px"
-      alt="a boy with a PC"
-    />
+
     <p>
       This website is an attempt to go back to the origins of the web, to
       it's simplest form, old web aesthetics and no frameworks or libraries
@@ -107,8 +102,15 @@ export function main() {
       the post
     </li>
   </ul>
+  <a href="#top">Back to Top</a>
 
   <h2 id="about">About</h2>
+  <img
+  src="./static/img/oldpc.jpg"
+  width="200px"
+  height="160px"
+  alt="a boy with a PC"
+/>
   <p>
     This is strictly personal website. All opinions in this website are of
     the author. This website is for personal leasure and learning purposes
@@ -120,5 +122,20 @@ export function main() {
     You can reach me via LinkedIn profile referenced in the footer of this
     page.
   </p>
-  <a href="#top">Back to Top</a>`;
+  <a href="#top">Back to Top</a>
+  
+  <h2 id="links">Links</h2>
+
+  <ul>
+  <li> <a
+  href="https://github.com/jdan/98.css"
+  target="_blank"
+  rel="noopener noreferrer"
+  >Very cool CSS inspired in Win98</a
+>
+  
+  </li>
+  </ul>
+
+  `;
 }

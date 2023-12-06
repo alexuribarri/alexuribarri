@@ -5,28 +5,45 @@ export function header() {
   //creating navigation elements
   // Select header and h1
   const header = document.querySelector("header");
+  header.className = "window";
+
   //const h1 = header.querySelector("h1");
 
   const headerWrapper = document.createElement("div");
-  headerWrapper.className = "header-wrapper";
+  headerWrapper.className = "title-bar";
 
   const logo = document.createElement("div");
-  logo.className = "logo";
-  logo.innerHTML = `<p>Alex's</p>`;
+  logo.className = "title-bar-text";
+  logo.innerHTML = `alexuribarri.com`;
 
   header.insertAdjacentElement("afterbegin", headerWrapper);
   headerWrapper.insertAdjacentElement("afterbegin", logo);
 
   // Create nav
+  const navWrapper = document.createElement("div");
+  navWrapper.className = "window-body";
   const nav = document.createElement("nav");
 
   // Add links to nav
   nav.innerHTML = `
-  <a href="/">Home</a>
-  <a href="./#about">About</a>
-  <a href="./#updates">Updates<a>
+  <a href="./">
+  <button>Home</button>
+  </a>
+
+  <a href="./#updates">
+  <button>Updates</button>
+  </a>
+
+  <a href="./#about">
+  <button>About</button>
+  </a>
+
+  <a href="./#links">
+  <button>Links</button>
+  </a>
 `;
 
   // Insert nav after h1
-  logo.insertAdjacentElement("afterend", nav);
+  headerWrapper.insertAdjacentElement("afterend", navWrapper);
+  navWrapper.insertAdjacentElement("afterbegin", nav);
 }
