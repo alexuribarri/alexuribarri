@@ -1,6 +1,7 @@
 export function main() {
   const mainHtml = document.querySelector("main");
   mainHtml.innerHTML = `      <h2>Welcome</h2>
+  
   <div id="first-parag">
 
     <p>
