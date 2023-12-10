@@ -1,11 +1,8 @@
 import main from "../menus/main.json" assert { type: "json" };
 
-export function header(siteName) {
+export function header() {
   let html = `
 
-  <div class="logo">
-  <p>${siteName} - Dev Env</p>
-</div>
 
     <ul>
   `;

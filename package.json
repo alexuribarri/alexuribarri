@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "inquirer": "^9.2.12",
-    "marked": "^11.0.0"
+    "marked": "^11.0.0",
+    "mkdirp": "^3.0.1"
   }
 }

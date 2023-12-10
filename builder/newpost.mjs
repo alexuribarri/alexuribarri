@@ -1,6 +1,16 @@
 import inquirer from "inquirer";
 import fs from "fs";
 
+const validateFilename = (filename) => {
+  if (!filename.match(/\.html?$/i)) {
+    return "File must have a .html or .htm extension";
+  }
+  if (filename.includes(" ")) {
+    return "Filename cannot contain spaces";
+  }
+  return true;
+};
+
 const questions = [
   {
     type: "input",
@@ -10,6 +20,7 @@ const questions = [
   {
     type: "input",
     name: "filename",
+    validate: validateFilename,
     message:
       "Enter html filename. Recommended length max 30 characters. Lowercase with hyphens like: blog-post-title.html",
   },
@@ -29,12 +40,13 @@ const questions = [
     type: "list",
     name: "type",
     message: "Select post type",
-    choices: ["Page", "Post"],
+    choices: ["Post", "Page"],
   },
   {
     type: "input",
     name: "path",
     message: "Enter relative path to web page. Root is ./ Blog is: ./blog/",
+    default: "./blog/",
   },
 
   {
@@ -42,6 +54,12 @@ const questions = [
     name: "content",
     message:
       "Enter blog post content. Start with h1 of maximum 50-60 charatcers",
+  },
+  {
+    type: "list",
+    name: "publish",
+    message: "Publish after running update.mjs?",
+    choices: ["No", "Yes"],
   },
 ];
 
@@ -70,6 +88,7 @@ inquirer.prompt(questions).then((answers) => {
     filename: answers.filename,
     path: answers.path,
     type: answers.type,
+    publish: answers.publish,
   };
 
   fs.writeFileSync(metadataFile, JSON.stringify(metadata));
