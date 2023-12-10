@@ -3,21 +3,6 @@ import fs from "fs/promises";
 import { builder } from "./js/mdmanager/builder.mjs";
 import { marked } from "marked";
 
-//function mdReader reads the contents of markdown file and converts it to html
-
-function mdReader(mdString) {
-  const parts = mdString.split("---");
-  const matter = parts[1];
-  const content = parts[2];
-  const metaData = JSON.parse(matter);
-  const html = marked(content);
-
-  return {
-    metadata: metaData,
-    content: html,
-  };
-}
-
 //processFiles reads the contents of the drafts folder and converts them to html
 async function processFiles() {
   try {

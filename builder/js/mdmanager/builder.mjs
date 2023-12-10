@@ -18,7 +18,7 @@ export function builder(posts) {
     // path: './blog/',
     // type: 'Post',
     // publish: 'Yes'
-    //folderName
+
     //html
     // <h1>first post</h1>
     // <p>ergergeqgrqerg</p>
@@ -32,7 +32,7 @@ export function builder(posts) {
     const path = post.metaData.path;
     const type = post.metaData.type;
     const publish = post.metaData.publish;
-    const folderName = post.folderName;
+
     const main = post.html;
     const headHtml = head();
     const headerHtml = header();
@@ -41,7 +41,7 @@ export function builder(posts) {
 
     //if post there will be ceated a folder, ir page, no folder will be created
     if (publish === "Yes" && type === "Post") {
-      const finalPath = `./dist/${path}/${folderName}/`;
+      const finalPath = `./dist/${path}/`;
       writer(content, finalPath, filename);
     } else if (
       publish === "Yes" &&
@@ -58,10 +58,10 @@ export function builder(posts) {
       const finalPath = `./preview/${path}/`;
       writer(content, finalPath, filename);
     } else if (publish === "No" && type === "Post") {
-      const finalPath = `./preview/${path}/${folderName}/`;
+      const finalPath = `./preview/${path}/`;
       writer(content, finalPath, filename);
     } else if (filename === "blog.html") {
-      blogroll(posts, headHtml, headerHtml, footerHtml);
+      blogroll(posts, main, headHtml, headerHtml, footerHtml);
     }
     // now for blogtoll I need to create two files: one that is being published
     //and another that is not

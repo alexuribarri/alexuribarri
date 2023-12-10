@@ -1,1 +1,10 @@
-{"title":"First Post","category":"Technology","meta":"This is a test if the first post","datetime":"2023-12-09T18:37:46.958Z","filename":"first-post.html","path":"./blog/","type":"Post","publish":"No"}
+{
+  "title": "First Post",
+  "category": "Technology",
+  "meta": "This is a test if the first post",
+  "datetime": "2023-12-09T18:37:46.958Z",
+  "filename": "first-post.html",
+  "path": "./",
+  "type": "Post",
+  "publish": "No"
+}

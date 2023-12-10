@@ -46,7 +46,6 @@ const questions = [
     type: "input",
     name: "path",
     message: "Enter relative path to web page. Root is ./ Blog is: ./blog/",
-    default: "./blog/",
   },
 
   {
