@@ -1,5 +1,9 @@
 # Personal website and blog that uses node.js to generate static content
 
+## How to start
+
+In the ./builder folder, edit config.json file with details of your blog
+
 ## Builder Structure
 
 ### newpost.mjs

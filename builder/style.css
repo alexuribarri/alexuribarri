@@ -1,0 +1,21 @@
+.logo a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  padding: 4px;
+}

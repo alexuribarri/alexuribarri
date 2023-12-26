@@ -34,7 +34,7 @@ export function builder(posts) {
     const publish = post.metaData.publish;
 
     const main = post.html;
-    const headHtml = head();
+    const headHtml = head(title, meta);
     const headerHtml = header();
     const footerHtml = footer();
     const content = headHtml + headerHtml + main + footerHtml;

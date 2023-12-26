@@ -23,23 +23,19 @@ export function blogroll(posts, main, headHtml, headerHtml, footerHtml) {
 
     if (post.metaData.publish === "Yes" && post.metaData.type === "Post") {
       const link = `<li><a href="${path}${filename}">${title}</a></li>`;
-      //console.log("Publish" + link);
       publishArray.push(link);
     } else if (
       post.metaData.publish === "No" &&
       post.metaData.type === "Post"
     ) {
       const link = `<li><a href="${path}${filename}">${title}</a></li>`;
-      console.log("Unbuplish" + link);
       unpublishArray.push(link);
     }
   });
 
   const htmlBuilder = (list, mainPart) => {
-    console.log(list);
-
     //Creating the list of links
-    const html = list.join("");
+    const html = `<ul>${list.join("")}</ul>`;
 
     mainPart += html;
     return mainPart;
