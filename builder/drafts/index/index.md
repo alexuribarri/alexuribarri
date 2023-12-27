@@ -1,6 +1,6 @@
 # Welcome to my personal page
 
-As you can probably see, this website is an attempt to go back to the origins of the web, to it's simplest form, with no frameworks or libraries.
+As you can probably see, this website is an attempt to go back to the origins of the web, to it's simplest form, with no frameworks nor libraries.
 
 I built my first website back in 2002 through the only user-friendly option available back then - <a href="https://en.wikipedia.org/wiki/GeoCities" target="_blank">Geocities</a>. I still have the URL: <a href="http://www.geocities.com/uribarialex/1.html" target="blank">http://www.geocities.com/uribarialex/1.html</a> but unfortunately, the site was not preserved and I was unable to find it archived elsewhere. Since then, I tried many different things to host my site: free hostings with site builders, Wordpress, static website generators like Publii, more complex static website generators with CLI and returning back to Wordpress again. I was never fully satisfied with the result (except, probably, with GeoCities...).
 
@@ -15,4 +15,4 @@ So I decided it is time to build something of my own. Why not build a minimalist
 
 ## What's next?
 
-Next most important update will be the image management. I still don't know how to implement this in a reasonably authmated fashon, but this is a priority. An image is better than 100 words!
+Next most important update will be the image management. I still don't know how to implement this in a reasonably automated fashion, but this is a priority. An image is better than 100 words!
