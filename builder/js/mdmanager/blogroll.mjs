@@ -47,7 +47,7 @@ export function blogroll(posts, main, headHtml, headerHtml, footerHtml) {
       headerHtml +
       htmlBuilder(publishArray, publishedMain) +
       footerHtml,
-    "./dist/",
+    "../pages/dist/",
     "blog.html"
   );
 

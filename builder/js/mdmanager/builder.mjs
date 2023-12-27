@@ -41,14 +41,14 @@ export function builder(posts) {
 
     //if post there will be ceated a folder, ir page, no folder will be created
     if (publish === "Yes" && type === "Post") {
-      const finalPath = `./dist/${path}/`;
+      const finalPath = `../pages/dist/${path}/`;
       writer(content, finalPath, filename);
     } else if (
       publish === "Yes" &&
       type === "Page" &&
       filename !== "blog.html"
     ) {
-      const finalPath = `./dist/${path}/`;
+      const finalPath = `../pages/dist/${path}/`;
       writer(content, finalPath, filename);
     } else if (
       publish === "No" &&
