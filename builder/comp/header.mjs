@@ -24,5 +24,5 @@ export function header() {
 
   const html = logoHtml + navHtml;
 
-  return html;
+  return `<header>${html}</header>`;
 }
