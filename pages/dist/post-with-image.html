@@ -1,0 +1,99 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=5">
+
+        <title>Post with image</title>
+
+        <meta name="description" content="This post is being used to build the image capability">
+
+        <style>body {
+  margin: auto;
+  max-width: 1280px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  padding: 4px;
+}
+
+footer {
+  background-color: dimgray;
+  color: white;
+}
+
+.footer-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social ul a {
+  color: white;
+}
+
+.post-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+
+      </head>
+    <header><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
+  <ul>
+    
+        <li><a href="./">Home</a></li>
+      
+        <li><a href="./blog.html">Blog</a></li>
+      
+        <li><a href="./about.html">About</a></li>
+      
+  </ul>
+  </nav></header><h1>Post with an image</h1>
+<p>I will use this post to test the ability to add images to posts:</p>
+<div class="post-figure">
+<figure>
+    <img src="./20180201_072252.jpg"
+         alt="Dnipro, Ukraine"
+        >
+    <figcaption>A flight over mouth of a Dnipro river and Black Sea</figcaption>
+
+</figure>    
+</div>
+
+<h2>Update December 29th 2023</h2>
+<p>So far I managed to do the following in regards to images: when writer decides to add an image, they should copy it to the folder of the draft article. When the upgrade.mjs script is executed, then all the images are minimized using imagemin and resized to 800px using jimp and then moved to the root folder of the website.</p>
+<code> 
+import imagemin from "imagemin";<br>
+import imageminJpegtran from "imagemin-jpegtran";<br>
+import imageminPngquant from "imagemin-pngquant"; </code>
+
+<p>Next steps would probably require the creation of an image database, where all the images have their characteristics stores, like location, descritpions, etc.. Will keep you posted</p>
+<footer><div class="footer-social"><ul>
+   <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>
+  
+   <li> <a href="https://x.com/alexuribarri">X.com</a> </li>
+  
+   <li> <a href="https://github.com/alexuribarri">GitHub</a> </li>
+  </ul></div><dic class="copyright">© 2023</div></footer>
