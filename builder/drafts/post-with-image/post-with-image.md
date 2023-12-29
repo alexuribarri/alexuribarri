@@ -22,3 +22,18 @@ import imageminJpegtran from "imagemin-jpegtran";<br>
 import imageminPngquant from "imagemin-pngquant"; </code>
 
 Next steps would probably require the creation of an image database, where all the images have their characteristics stores, like location, descritpions, etc.. Will keep you posted
+
+## New problems...
+
+OK, after uploading the files to web hosting, the Lighouse results are terrible due to CLS (Cumulative Layout Shift)
+
+<div class="post-figure">
+<figure>
+    <img src="./cls-problem.png"
+         alt="CLS Problem"
+         height="300px"
+        >
+    <figcaption>Problem with the CLS after uploading the site update to the hosting</figcaption>
+
+</figure>    
+</div>
