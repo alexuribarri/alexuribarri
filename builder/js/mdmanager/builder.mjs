@@ -3,27 +3,10 @@ import { head } from "../../comp/head.mjs";
 import { writer } from "../../writer.mjs";
 import { header } from "../../comp/header.mjs";
 import { blogroll } from "./blogroll.mjs";
-// Import config.json file with 'json' type
-import config from "../../config.json" assert { type: "json" };
+import { mainHtml } from "../../comp/main.mjs";
 
 export function builder(posts) {
   for (const post of posts) {
-    //post is receiving an object that consist of:
-    //metaData
-    // title: 'This is a first full post',
-    // category: 'Economy',
-    // meta: 'Checking the possibility to publish my first post',
-    // datetime: '2023-12-09T14:24:30.472Z',
-    // filename: 'first-post.html',
-    // path: './blog/',
-    // type: 'Post',
-    // publish: 'Yes'
-
-    //html
-    // <h1>first post</h1>
-    // <p>ergergeqgrqerg</p>
-    //stats (information of when file has been updated last time)
-
     const title = post.metaData.title;
     const category = post.metaData.category;
     const meta = post.metaData.meta;
@@ -37,7 +20,7 @@ export function builder(posts) {
     const headHtml = head(title, meta);
     const headerHtml = header();
     const footerHtml = footer();
-    const content = headHtml + headerHtml + main + footerHtml;
+    const content = headHtml + headerHtml + mainHtml(main) + footerHtml;
 
     //if post there will be ceated a folder, ir page, no folder will be created
     if (publish === "Yes" && type === "Post") {

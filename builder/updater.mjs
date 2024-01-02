@@ -64,8 +64,6 @@ async function processFiles() {
     }
 
     builder(posts);
-
-    console.log("Files processed successfully!");
   } catch (err) {
     console.error(err);
   }

@@ -1,4 +1,6 @@
 import { writer } from "../../writer.mjs";
+import { mainHtml } from "../../comp/main.mjs";
+
 export function blogroll(posts, main, headHtml, headerHtml, footerHtml) {
   const publishArray = [];
   const unpublishArray = [];
@@ -38,7 +40,7 @@ export function blogroll(posts, main, headHtml, headerHtml, footerHtml) {
     const html = `<ul>${list.join("")}</ul>`;
 
     mainPart += html;
-    return mainPart;
+    return mainHtml(mainPart);
   };
 
   //writing blog page for published posts

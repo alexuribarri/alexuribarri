@@ -10,15 +10,27 @@
         <meta name="description" content="Alex's Uribarri personal website">
 
         <style>body {
-  margin: auto;
-  max-width: 1280px;
+  margin: 0;
+}
+
+header {
+  background-color: #515b87;
+}
+
+.header-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo a {
   text-decoration: none;
-  color: black;
+  color: #9eb4d3;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -33,13 +45,31 @@ nav ul {
   padding: 0;
 }
 
-nav li {
+nav ul li {
   padding: 4px;
 }
 
+nav ul li a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9eb4d3;
+}
+
+.main-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 footer {
-  background-color: dimgray;
-  color: white;
+  background-color: #515b87;
+  color: #9eb4d3;
 }
 
 .footer-social ul {
@@ -49,7 +79,9 @@ footer {
 }
 
 .footer-social ul a {
-  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9eb4d3;
 }
 
 .post-figure {
@@ -58,10 +90,24 @@ footer {
   align-items: center;
   max-width: 800px;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #e2552d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #00a170;
+}
 </style>
 
       </head>
-    <header><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
+    <header><div class="header-wrapper"><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
   <ul>
     
         <li><a href="./">Home</a></li>
@@ -71,7 +117,7 @@ footer {
         <li><a href="./about.html">About</a></li>
       
   </ul>
-  </nav></header><h1>Welcome to my personal page</h1>
+  </nav></div></header><main><div class="main-wrapper"><h1>Welcome to my personal page</h1>
 <p>As you can probably see, this website is an attempt to go back to the origins of the web, to it&#39;s simplest form, with no frameworks nor libraries.</p>
 <p>I built my first website back in 2002 through the only user-friendly option available back then - <a href="https://en.wikipedia.org/wiki/GeoCities" target="_blank">Geocities</a>. I still have the URL: <a href="http://www.geocities.com/uribarialex/1.html" target="blank">http://www.geocities.com/uribarialex/1.html</a> but unfortunately, the site was not preserved and I was unable to find it archived elsewhere. Since then, I tried many different things to host my site: free hostings with site builders, Wordpress, static website generators like Publii, more complex static website generators with CLI and returning back to Wordpress again. I was never fully satisfied with the result (except, probably, with GeoCities...).</p>
 <p>So I decided it is time to build something of my own. Why not build a minimalist CRM that covers the basics? Ideally, serving content with a unique HTML file. And my personal webstie will be the testground for such CRM. As soon as the CRM will reach MVP, I&#39;ll publish a GitHub repo with the source code so anyone will be able to use it and contribute.</p>
@@ -84,10 +130,10 @@ footer {
 </ul>
 <h2>What&#39;s next?</h2>
 <p>Next most important update will be the image management. I still don&#39;t know how to implement this in a reasonably automated fashion, but this is a priority. An image is better than 100 words!</p>
-<footer><div class="footer-social"><ul>
+</div></main><footer><div class="footer-wrapper"><div class="footer-social"><ul>
    <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>
   
    <li> <a href="https://x.com/alexuribarri">X.com</a> </li>
   
    <li> <a href="https://github.com/alexuribarri">GitHub</a> </li>
-  </ul></div><dic class="copyright">© 2023</div></footer>
+  </ul></div><dic class="copyright">© 2023 - Alex Uribarri. LLM training using information from this site is prohibited.</div></div></footer>

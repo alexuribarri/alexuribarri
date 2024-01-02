@@ -10,15 +10,27 @@
         <meta name="description" content="Reasons why a minimalist approach to a personal website is actually better. Serving lightweight, curated site focuses on the content and not on the decoration.">
 
         <style>body {
-  margin: auto;
-  max-width: 1280px;
+  margin: 0;
+}
+
+header {
+  background-color: #515b87;
+}
+
+.header-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo a {
   text-decoration: none;
-  color: black;
+  color: #9eb4d3;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -33,13 +45,31 @@ nav ul {
   padding: 0;
 }
 
-nav li {
+nav ul li {
   padding: 4px;
 }
 
+nav ul li a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9eb4d3;
+}
+
+.main-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 footer {
-  background-color: dimgray;
-  color: white;
+  background-color: #515b87;
+  color: #9eb4d3;
 }
 
 .footer-social ul {
@@ -49,7 +79,9 @@ footer {
 }
 
 .footer-social ul a {
-  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9eb4d3;
 }
 
 .post-figure {
@@ -58,10 +90,24 @@ footer {
   align-items: center;
   max-width: 800px;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #e2552d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #00a170;
+}
 </style>
 
       </head>
-    <header><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
+    <header><div class="header-wrapper"><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
   <ul>
     
         <li><a href="./">Home</a></li>
@@ -71,17 +117,17 @@ footer {
         <li><a href="./about.html">About</a></li>
       
   </ul>
-  </nav></header><h1>Why I decided to build my own CRM</h1>
+  </nav></div></header><main><div class="main-wrapper"><h1>Why I decided to build my own CRM</h1>
 <p>Personal webpage is the space for your thoughts in the www. Billions of people with internet access can know about you in a unique way through this space. The only restrictions are your creativity, local laws, and common ethics. You set the T&amp;C, the design and viewer experience. You build the content. While social platforms may offer simple way to publish your thoughts, the way thoughts are presented and served to people is out of your control.</p>
 <p>There are many available CRMs that give you more control over the presentation of your thouhgts compared to social platforms. The most common is WordPress, which is free to use if self-hosted. It provides a myriad of configuration options, plugins, themes and many more. I used WordPress for years to host this site. In fact, I will be migrating my old posts from WordPress install, so the structure of old posts will keep the standard WordPress layout. The problem with such CRMs is that they are still incorporating plenty of libraries, frameworks and other code that make pages heavy.</p>
 <p>I want to build a site that will work with essentials – in best case scenario loading a single HTML file with all the elements in it. No separate CSS, JS… everything inside the HTML. The reality is that I don’t really need all these frameworks downloaded from external CDNs, external fonts, CSS styles that are never used. We are overprovisioning on all that code that we might never use.</p>
 <p>Another reason to build my own minimalist CRM is to make this project my hobby. I love node.js and there’s no better way to learn it than building something with it. When this CRM will reach the MVP stage, I’ll open source it and will publish the GitHub repository so everyone can contribute.</p>
 <p>With this being said, Happy New 2024!</p>
 <p>Alex</p>
-<footer><div class="footer-social"><ul>
+</div></main><footer><div class="footer-wrapper"><div class="footer-social"><ul>
    <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>
   
    <li> <a href="https://x.com/alexuribarri">X.com</a> </li>
   
    <li> <a href="https://github.com/alexuribarri">GitHub</a> </li>
-  </ul></div><dic class="copyright">© 2023</div></footer>
+  </ul></div><dic class="copyright">© 2023 - Alex Uribarri. LLM training using information from this site is prohibited.</div></div></footer>

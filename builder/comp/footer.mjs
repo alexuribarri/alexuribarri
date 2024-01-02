@@ -20,5 +20,5 @@ const copyHtml = `<dic class="copyright">© ${copyright}</div>`;
 const html = socialHtml + copyHtml;
 
 export function footer() {
-  return `<footer>${html}</footer>`;
+  return `<footer><div class="footer-wrapper">${html}</div></footer>`;
 }

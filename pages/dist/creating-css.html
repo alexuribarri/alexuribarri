@@ -1,0 +1,212 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=5">
+
+        <title>Creating CSS styles</title>
+
+        <meta name="description" content="Step my step information on how I'm creating the CSS for the site">
+
+        <style>body {
+  margin: 0;
+}
+
+header {
+  background-color: #515b87;
+}
+
+.header-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #9eb4d3;
+  font-weight: 900;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 4px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9eb4d3;
+}
+
+.main-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  background-color: #515b87;
+  color: #9eb4d3;
+}
+
+.footer-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social ul a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9eb4d3;
+}
+
+.post-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #e2552d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #00a170;
+}
+</style>
+
+      </head>
+    <header><div class="header-wrapper"><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
+  <ul>
+    
+        <li><a href="./">Home</a></li>
+      
+        <li><a href="./blog.html">Blog</a></li>
+      
+        <li><a href="./about.html">About</a></li>
+      
+  </ul>
+  </nav></div></header><main><div class="main-wrapper"><h1>Creating simple CSS</h1>
+<p>Styles in this CMS are managed through the style.css in the root folder. But unlike other CMS platforms, the information is not loaded with a separate site, but it is embedded in each and every HTML document created. This allows content to be rendered at page load, avoiding content displacement.</p>
+<p>As everythinh with this CMS, CSS will be extremely minimalist. The idea is to maje it responsive with time, but I will start building it for desktop first. Only vanilla CSS will be used.</p>
+<h2>Color palette</h2>
+<p>As we just entered 2024, let&#39;s pay tribute to this new year, and use the New York Fashion Week Spring 2024 Color Palette as inspiration. I will use the <a href="https://www.pantone.com/articles/fashion-color-trend-report/new-york-fashion-week-spring-2024" target="__blank">official Pantone website</a> to pick the colors:</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Pantone</th>
+<th>HEX</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Rooibos Tea</td>
+<td>18-1355 TCX</td>
+<td>#a23c26</td>
+</tr>
+<tr>
+<td>Orangeade</td>
+<td>17-1461 TCX</td>
+<td>#e2552d</td>
+</tr>
+<tr>
+<td>Watercress</td>
+<td>17-0220 TCX</td>
+<td>#748c69</td>
+</tr>
+<tr>
+<td>Desert Flower</td>
+<td>15-1435 TCX</td>
+<td>#ff9687</td>
+</tr>
+<tr>
+<td>Chambray Blue</td>
+<td>15-4030 TCX</td>
+<td>#9eb4d3</td>
+</tr>
+<tr>
+<td>Pastel Lilac</td>
+<td>14-3812 TCX</td>
+<td>#bcafcf</td>
+</tr>
+<tr>
+<td>Marlin</td>
+<td>18-3932 TCX</td>
+<td>#515b87</td>
+</tr>
+<tr>
+<td>Lemon Drop</td>
+<td>12-0736 TCX</td>
+<td>#fdd878</td>
+</tr>
+<tr>
+<td>Mint</td>
+<td>16-5938 TCX</td>
+<td>#00a170</td>
+</tr>
+<tr>
+<td>Capri</td>
+<td>15-4722 TCX</td>
+<td>#44bbca</td>
+</tr>
+</tbody></table>
+<p>I was using <a href="https://encycolorpedia.com/" target="__blank">this website</a> to translate Pantone colors to HEX.</p>
+<ul>
+<li>Main color: Marlin</li>
+<li>Main contrast color: Pastel Lilac</li>
+<li>Headers color: Orangeade</li>
+<li>Link colors: Mint</li>
+</ul>
+<h2>Dimensions</h2>
+<p>I will be using <a href="https://www.figma.com/community/file/1165348645914656641" target="__blank">this</a> Figma template for layouts and dimensions, essentially braking the responsivness in two widths: 1280px and 375px.</p>
+<h3>Desktop dimensions</h3>
+<ul>
+<li>Inner content width: 1000px (header, hero images, main titles)</li>
+<li>Article width: 660px</li>
+<li>Image inside article width: 660px (height 370px)</li>
+</ul>
+<h2>Fonts</h2>
+<ul>
+<li>Logo: Arial</li>
+<li>Headings: Arial</li>
+<li>Navigation links: arial</li>
+<li>Text: Times New Roman</li>
+</ul>
+</div></main><footer><div class="footer-wrapper"><div class="footer-social"><ul>
+   <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>
+  
+   <li> <a href="https://x.com/alexuribarri">X.com</a> </li>
+  
+   <li> <a href="https://github.com/alexuribarri">GitHub</a> </li>
+  </ul></div><dic class="copyright">© 2023 - Alex Uribarri. LLM training using information from this site is prohibited.</div></div></footer>

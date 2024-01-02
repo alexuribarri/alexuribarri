@@ -10,15 +10,27 @@
         <meta name="description" content="This post is being used to build the image capability">
 
         <style>body {
-  margin: auto;
-  max-width: 1280px;
+  margin: 0;
+}
+
+header {
+  background-color: #515b87;
+}
+
+.header-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo a {
   text-decoration: none;
-  color: black;
+  color: #9eb4d3;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -33,13 +45,31 @@ nav ul {
   padding: 0;
 }
 
-nav li {
+nav ul li {
   padding: 4px;
 }
 
+nav ul li a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9eb4d3;
+}
+
+.main-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 footer {
-  background-color: dimgray;
-  color: white;
+  background-color: #515b87;
+  color: #9eb4d3;
 }
 
 .footer-social ul {
@@ -49,7 +79,9 @@ footer {
 }
 
 .footer-social ul a {
-  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9eb4d3;
 }
 
 .post-figure {
@@ -58,10 +90,24 @@ footer {
   align-items: center;
   max-width: 800px;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #e2552d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #00a170;
+}
 </style>
 
       </head>
-    <header><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
+    <header><div class="header-wrapper"><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
   <ul>
     
         <li><a href="./">Home</a></li>
@@ -71,7 +117,7 @@ footer {
         <li><a href="./about.html">About</a></li>
       
   </ul>
-  </nav></header><h1>Post with an image</h1>
+  </nav></div></header><main><div class="main-wrapper"><h1>Post with an image</h1>
 <p>I will use this post to test the ability to add images to posts:</p>
 <div class="post-figure">
 <figure>
@@ -103,10 +149,10 @@ import imageminPngquant from "imagemin-pngquant"; </code>
 
 </figure>    
 </div>
-<footer><div class="footer-social"><ul>
+</div></main><footer><div class="footer-wrapper"><div class="footer-social"><ul>
    <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>
   
    <li> <a href="https://x.com/alexuribarri">X.com</a> </li>
   
    <li> <a href="https://github.com/alexuribarri">GitHub</a> </li>
-  </ul></div><dic class="copyright">© 2023</div></footer>
+  </ul></div><dic class="copyright">© 2023 - Alex Uribarri. LLM training using information from this site is prohibited.</div></div></footer>
