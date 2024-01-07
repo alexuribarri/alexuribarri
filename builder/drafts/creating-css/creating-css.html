@@ -23,130 +23,132 @@
     </div>
   </div>
   <div class="main-wrapper">
-    <p>
-      Styles in this CMS are managed through the style.css in the root folder.
-      But unlike other CMS platforms, the information is not loaded with a
-      separate site, but it is embedded in each and every HTML document created.
-      This allows content to be rendered at page load, avoiding content
-      displacement.
-    </p>
-    <p>
-      As everythinh with this CMS, CSS will be extremely minimalist. The idea is
-      to maje it responsive with time, but I will start building it for desktop
-      first. Only vanilla CSS will be used.
-    </p>
-    <h2>Color palette</h2>
-    <p>
-      As we just entered 2024, let&#39;s pay tribute to this new year, and use
-      the New York Fashion Week Spring 2024 Color Palette as inspiration. I will
-      use the
-      <a
-        href="https://www.pantone.com/articles/fashion-color-trend-report/new-york-fashion-week-spring-2024"
-        target="__blank"
-        >official Pantone website</a
-      >
-      to pick the colors:
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th>Color</th>
-          <th>Pantone</th>
-          <th>HEX</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Rooibos Tea</td>
-          <td>18-1355 TCX</td>
-          <td style="background-color: #a23c26">#a23c26</td>
-        </tr>
-        <tr>
-          <td>Orangeade</td>
-          <td>17-1461 TCX</td>
-          <td style="background-color: #e2552d">#e2552d</td>
-        </tr>
-        <tr>
-          <td>Watercress</td>
-          <td>17-0220 TCX</td>
-          <td style="background-color: #748c69">#748c69</td>
-        </tr>
-        <tr>
-          <td>Desert Flower</td>
-          <td>15-1435 TCX</td>
-          <td style="background-color: #ff9687">#ff9687</td>
-        </tr>
-        <tr>
-          <td>
-            Chambray Blue*<br />
-            <span style="background-color: #d0e4ff"
-              >*due to low contrast, changed to: #d0e4ff</span
-            >
-          </td>
-          <td>15-4030 TCX</td>
-          <td style="background-color: #9eb4d3">#9eb4d3</td>
-        </tr>
-        <tr>
-          <td>Pastel Lilac</td>
-          <td>14-3812 TCX</td>
-          <td style="background-color: #bcafcf">#bcafcf</td>
-        </tr>
-        <tr>
-          <td>Marlin</td>
-          <td>18-3932 TCX</td>
-          <td style="background-color: #515b87">#515b87</td>
-        </tr>
-        <tr>
-          <td>Lemon Drop</td>
-          <td>12-0736 TCX</td>
-          <td style="background-color: #fdd878">#fdd878</td>
-        </tr>
-        <tr>
-          <td>Mint</td>
-          <td>16-5938 TCX</td>
-          <td style="background-color: #00a170">#00a170</td>
-        </tr>
-        <tr>
-          <td>Capri</td>
-          <td>15-4722 TCX</td>
-          <td style="background-color: #44bbca">#44bbca</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      I was using
-      <a href="https://encycolorpedia.com/" target="__blank">this website</a> to
-      translate Pantone colors to HEX.
-    </p>
-    <ul>
-      <li>Main color: Marlin</li>
-      <li>Main contrast color: Pastel Lilac</li>
-      <li>Headers color: Orangeade</li>
-      <li>Link colors: Mint</li>
-    </ul>
-    <h2>Dimensions</h2>
-    <p>
-      I will be using
-      <a
-        href="https://www.figma.com/community/file/1165348645914656641"
-        target="__blank"
-        >this</a
-      >
-      Figma template for layouts and dimensions, essentially braking the
-      responsivness in two widths: 1280px and 375px.
-    </p>
-    <h3>Desktop dimensions</h3>
-    <ul>
-      <li>Inner content width: 1000px (header, hero images, main titles)</li>
-      <li>Article width: 660px</li>
-      <li>Image inside article width: 660px (height 370px)</li>
-    </ul>
-    <h2>Fonts</h2>
-    <ul>
-      <li>Logo: Arial</li>
-      <li>Headings: Arial</li>
-      <li>Navigation links: arial</li>
-      <li>Text: Times New Roman</li>
-    </ul>
+    <div class="main-div-part">
+      <p>
+        Styles in this CMS are managed through the style.css in the root folder.
+        But unlike other CMS platforms, the information is not loaded with a
+        separate site, but it is embedded in each and every HTML document
+        created. This allows content to be rendered at page load, avoiding
+        content displacement.
+      </p>
+      <p>
+        As everythinh with this CMS, CSS will be extremely minimalist. The idea
+        is to maje it responsive with time, but I will start building it for
+        desktop first. Only vanilla CSS will be used.
+      </p>
+      <h2>Color palette</h2>
+      <p>
+        As we just entered 2024, let&#39;s pay tribute to this new year, and use
+        the New York Fashion Week Spring 2024 Color Palette as inspiration. I
+        will use the
+        <a
+          href="https://www.pantone.com/articles/fashion-color-trend-report/new-york-fashion-week-spring-2024"
+          target="__blank"
+          >official Pantone website</a
+        >
+        to pick the colors:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Color</th>
+            <th>Pantone</th>
+            <th>HEX</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rooibos Tea</td>
+            <td>18-1355 TCX</td>
+            <td style="background-color: #a23c26">#a23c26</td>
+          </tr>
+          <tr>
+            <td>Orangeade</td>
+            <td>17-1461 TCX</td>
+            <td style="background-color: #e2552d">#e2552d</td>
+          </tr>
+          <tr>
+            <td>Watercress</td>
+            <td>17-0220 TCX</td>
+            <td style="background-color: #748c69">#748c69</td>
+          </tr>
+          <tr>
+            <td>Desert Flower</td>
+            <td>15-1435 TCX</td>
+            <td style="background-color: #ff9687">#ff9687</td>
+          </tr>
+          <tr>
+            <td>
+              Chambray Blue*<br />
+              <span style="background-color: #d0e4ff"
+                >*due to low contrast, changed to: #d0e4ff</span
+              >
+            </td>
+            <td>15-4030 TCX</td>
+            <td style="background-color: #9eb4d3">#9eb4d3</td>
+          </tr>
+          <tr>
+            <td>Pastel Lilac</td>
+            <td>14-3812 TCX</td>
+            <td style="background-color: #bcafcf">#bcafcf</td>
+          </tr>
+          <tr>
+            <td>Marlin</td>
+            <td>18-3932 TCX</td>
+            <td style="background-color: #515b87">#515b87</td>
+          </tr>
+          <tr>
+            <td>Lemon Drop</td>
+            <td>12-0736 TCX</td>
+            <td style="background-color: #fdd878">#fdd878</td>
+          </tr>
+          <tr>
+            <td>Mint</td>
+            <td>16-5938 TCX</td>
+            <td style="background-color: #00a170">#00a170</td>
+          </tr>
+          <tr>
+            <td>Capri</td>
+            <td>15-4722 TCX</td>
+            <td style="background-color: #44bbca">#44bbca</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        I was using
+        <a href="https://encycolorpedia.com/" target="__blank">this website</a>
+        to translate Pantone colors to HEX.
+      </p>
+      <ul>
+        <li>Main color: Marlin</li>
+        <li>Main contrast color: Pastel Lilac</li>
+        <li>Headers color: Orangeade</li>
+        <li>Link colors: Mint</li>
+      </ul>
+      <h2>Dimensions</h2>
+      <p>
+        I will be using
+        <a
+          href="https://www.figma.com/community/file/1165348645914656641"
+          target="__blank"
+          >this</a
+        >
+        Figma template for layouts and dimensions, essentially braking the
+        responsivness in two widths: 1280px and 375px.
+      </p>
+      <h3>Desktop dimensions</h3>
+      <ul>
+        <li>Inner content width: 1000px (header, hero images, main titles)</li>
+        <li>Article width: 660px</li>
+        <li>Image inside article width: 660px (height 370px)</li>
+      </ul>
+      <h2>Fonts</h2>
+      <ul>
+        <li>Logo: Arial</li>
+        <li>Headings: Arial</li>
+        <li>Navigation links: arial</li>
+        <li>Text: Times New Roman</li>
+      </ul>
+    </div>
   </div>
 </main>
