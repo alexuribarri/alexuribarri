@@ -1,1 +1,10 @@
-{"title":"My minimalist CRM","category":"Technology","meta":"Reasons why a minimalist approach to a personal website is actually better. Serving lightweight, curated site focuses on the content and not on the decoration.","datetime":"2023-12-27T20:43:14.453Z","filename":"my-minimalist-crm.html","path":"./","type":"Post","publish":"Yes"}
+{
+  "title": "My minimalist CMS",
+  "category": "Technology",
+  "meta": "Reasons why a minimalist approach to a personal website is actually better. Serving lightweight, curated site focuses on the content and not on the decoration.",
+  "datetime": "2023-12-27T20:43:14.453Z",
+  "filename": "my-minimalist-CMS.html",
+  "path": "./",
+  "type": "Post",
+  "publish": "Yes"
+}
