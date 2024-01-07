@@ -22,7 +22,7 @@ const questions = [
     name: "filename",
     validate: validateFilename,
     message:
-      "Enter html filename. Recommended length max 30 characters. Lowercase with hyphens like: blog-post-title.html",
+      "Enter html filename (including extension). Recommended length max 30 characters. Lowercase with hyphens like: blog-post-title.html",
   },
   {
     type: "input",
@@ -34,7 +34,7 @@ const questions = [
     type: "list",
     name: "category",
     message: "Select category",
-    choices: ["Economy", "Technology", "Future"],
+    choices: ["Economy", "Technology", "Future", "Nautica CMS"],
   },
   {
     type: "list",
@@ -48,12 +48,6 @@ const questions = [
     message: "Enter relative path to web page. Root is ./ Blog is: ./blog/",
   },
 
-  {
-    type: "input",
-    name: "content",
-    message:
-      "Enter blog post content. Start with h1 of maximum 50-60 charatcers",
-  },
   {
     type: "list",
     name: "publish",
@@ -73,7 +67,6 @@ inquirer.prompt(questions).then((answers) => {
   // post projects (drafts) file creation. This is only for drafts as the pubblished path is described in the
   //JSON metada file
   const metaFileName = answers.filename.replace(".html", ".json");
-  const mdFileName = answers.filename.replace(".html", ".md");
 
   const metadataFile = draftFolder + metaFileName;
 
@@ -90,11 +83,39 @@ inquirer.prompt(questions).then((answers) => {
     publish: answers.publish,
   };
 
+  const content = `<!-- .main-wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .main-div-full {
+    width: 100%;
+  }
+  
+  .main-div-part {
+    margin-right: 5px;
+    margin-left: 5px;
+  } -->
+
+<main>
+  <div
+    class="main-div-full hero-title"
+    style="background-image: url(./atlantic_boat.jpg)"
+  >
+    <div class="main-wrapper">
+      <h1 class="h1-hero-title">${answers.title}</h1>
+    </div>
+  </div>
+  <div class="main-wrapper"></div>
+</main>
+`;
+
   fs.writeFileSync(metadataFile, JSON.stringify(metadata));
 
-  const contentFile = draftFolder + mdFileName;
+  const contentFile = draftFolder + answers.filename;
 
-  fs.writeFileSync(contentFile, answers.content);
+  fs.writeFileSync(contentFile, content);
 
   console.log("Files created successfully!");
 });

@@ -69,15 +69,27 @@ nav ul li a {
   color: #d0e4ff;
 }
 
-main {
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
 .main-wrapper {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-title {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 15vh;
+  display: flex;
+}
+
+.main-div-full {
+  width: 100%;
+}
+
+.main-div-part {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .footer-wrapper {
@@ -127,6 +139,14 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.h1-hero-title {
+  color: #d0e4ff;
+  font-size: 72px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
+}
+
 a {
   color: #00a170;
 }
@@ -143,8 +163,33 @@ a {
         <li><a href="./about.html">About</a></li>
       
   </ul>
-  </nav></div></header><main><div class="main-wrapper"><h1>Recent blog posts</h1>
-<ul><li><a href="./creating-css.html">Creating CSS styles</a></li><li><a href="./my-minimalist-CMS.html">My minimalist CMS</a></li><li><a href="./post-with-image.html">Post with image</a></li></ul></div></main><footer><div class="footer-wrapper"><div class="footer-social"><ul>
+  </nav></div></header><!-- .main-wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .main-div-full {
+    width: 100%;
+  }
+  
+  .main-div-part {
+    margin-right: 5px;
+    margin-left: 5px;
+  } -->
+
+<main>
+  <div
+    class="main-div-full hero-title"
+    style="background-image: url(./atlantic_boat.jpg)"
+  >
+    <div class="main-wrapper">
+      <h1 class="h1-hero-title">Recent posts</h1>
+    </div>
+  </div>
+  <div class="main-wrapper"></div>
+</main>
+<div class="main-wrapper"><ul><li><a href="./creating-css.html">Creating CSS styles</a></li><li><a href="./my-minimalist-CMS.html">My minimalist CMS</a></li><li><a href="./post-with-image.html">Post with image</a></li></ul></div><footer><div class="footer-wrapper"><div class="footer-social"><ul>
    <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>
   
    <li> <a href="https://x.com/alexuribarri">X.com</a> </li>

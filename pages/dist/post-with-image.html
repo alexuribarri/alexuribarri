@@ -69,15 +69,27 @@ nav ul li a {
   color: #d0e4ff;
 }
 
-main {
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
 .main-wrapper {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-title {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 15vh;
+  display: flex;
+}
+
+.main-div-full {
+  width: 100%;
+}
+
+.main-div-part {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .footer-wrapper {
@@ -127,6 +139,14 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.h1-hero-title {
+  color: #d0e4ff;
+  font-size: 72px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
+}
+
 a {
   color: #00a170;
 }
@@ -147,39 +167,76 @@ a {
         <li><a href="./about.html">About</a></li>
       
   </ul>
-  </nav></div></header><main><div class="main-wrapper"><h1>Post with an image</h1>
-<p>I will use this post to test the ability to add images to posts:</p>
-<div class="post-figure">
-<figure>
-    <img src="./20180201_072252.jpg"
-         alt="Dnipro, Ukraine"
-        >
-    <figcaption>A flight over mouth of a Dnipro river and Black Sea</figcaption>
+  </nav></div></header><!-- .main-wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .main-div-full {
+    width: 100%;
+  }
+  
+  .main-div-part {
+    margin-right: 5px;
+    margin-left: 5px;
+  } -->
 
-</figure>    
-</div>
+<main>
+  <div
+    class="main-div-full hero-title"
+    style="background-image: url(./atlantic_boat.jpg)"
+  >
+    <div class="main-wrapper">
+      <h1 class="h1-hero-title">Post with an image</h1>
+    </div>
+  </div>
+  <div class="main-wrapper">
+    <p>I will use this post to test the ability to add images to posts:</p>
+    <div class="post-figure">
+      <figure>
+        <img src="./20180201_072252.jpg" alt="Dnipro, Ukraine" />
+        <figcaption>
+          A flight over mouth of a Dnipro river and Black Sea
+        </figcaption>
+      </figure>
+    </div>
 
-<h2>Update December 29th 2023</h2>
-<p>So far I managed to do the following in regards to images: when writer decides to add an image, they should copy it to the folder of the draft article. When the upgrade.mjs script is executed, then all the images are minimized using imagemin and resized to 800px using jimp and then moved to the root folder of the website.</p>
-<code> 
-import imagemin from "imagemin";<br>
-import imageminJpegtran from "imagemin-jpegtran";<br>
-import imageminPngquant from "imagemin-pngquant"; </code>
+    <h2>Update December 29th 2023</h2>
+    <p>
+      So far I managed to do the following in regards to images: when writer
+      decides to add an image, they should copy it to the folder of the draft
+      article. When the upgrade.mjs script is executed, then all the images are
+      minimized using imagemin and resized to 800px using jimp and then moved to
+      the root folder of the website.
+    </p>
+    <code>
+      import imagemin from "imagemin";<br />
+      import imageminJpegtran from "imagemin-jpegtran";<br />
+      import imageminPngquant from "imagemin-pngquant";
+    </code>
 
-<p>Next steps would probably require the creation of an image database, where all the images have their characteristics stores, like location, descritpions, etc.. Will keep you posted</p>
-<h2>New problems...</h2>
-<p>OK, after uploading the files to web hosting, the Lighouse results are terrible due to CLS (Cumulative Layout Shift)</p>
-<div class="post-figure">
-<figure>
-    <img src="./cls-problem.png"
-         alt="CLS Problem"
-         height="300px"
-        >
-    <figcaption>Problem with the CLS after uploading the site update to the hosting</figcaption>
+    <p>
+      Next steps would probably require the creation of an image database, where
+      all the images have their characteristics stores, like location,
+      descritpions, etc.. Will keep you posted
+    </p>
+    <h2>New problems...</h2>
+    <p>
+      OK, after uploading the files to web hosting, the Lighouse results are
+      terrible due to CLS (Cumulative Layout Shift)
+    </p>
+    <div class="post-figure">
+      <figure>
+        <img src="./cls-problem.png" alt="CLS Problem" height="300px" />
+        <figcaption>
+          Problem with the CLS after uploading the site update to the hosting
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</main>
 
-</figure>    
-</div>
-</div></main>
    </div>
    <footer><div class="footer-wrapper"><div class="footer-social"><ul>
    <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>

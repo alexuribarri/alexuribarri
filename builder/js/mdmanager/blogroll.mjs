@@ -37,7 +37,7 @@ export function blogroll(posts, main, headHtml, headerHtml, footerHtml) {
 
   const htmlBuilder = (list, mainPart) => {
     //Creating the list of links
-    const html = `<ul>${list.join("")}</ul>`;
+    const html = `<div class="main-wrapper"><ul>${list.join("")}</ul></div>`;
 
     mainPart += html;
     return mainHtml(mainPart);

@@ -58,15 +58,27 @@ nav ul li a {
   color: #d0e4ff;
 }
 
-main {
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
 .main-wrapper {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-title {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 15vh;
+  display: flex;
+}
+
+.main-div-full {
+  width: 100%;
+}
+
+.main-div-part {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .footer-wrapper {
@@ -114,6 +126,14 @@ h5,
 h6 {
   color: #e2552d;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1-hero-title {
+  color: #d0e4ff;
+  font-size: 72px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
 }
 
 a {

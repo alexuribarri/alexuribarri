@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import { builder } from "./js/mdmanager/builder.mjs";
-import { marked } from "marked";
+
 import imagemin from "imagemin";
 import imageminJpegtran from "imagemin-jpegtran";
 import imageminPngquant from "imagemin-pngquant";
@@ -43,16 +43,13 @@ async function processFiles() {
 
       optimizeImages();
 
-      const content = await fs.readFile(
-        `./drafts/${draft}/${draft}.md`,
-        "utf8"
-      );
+      const html = await fs.readFile(`./drafts/${draft}/${draft}.html`, "utf8");
 
       //converting content to html
-      const html = marked(content);
+
       const folderName = draft;
 
-      const stats = await fs.stat(`./drafts/${draft}/${draft}.md`);
+      const stats = await fs.stat(`./drafts/${draft}/${draft}.html`);
       const metaStream = await fs.readFile(`./drafts/${draft}/${draft}.json`);
       const metaData = JSON.parse(metaStream);
       posts.push({
