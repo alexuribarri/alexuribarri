@@ -13,8 +13,21 @@
   margin: 0;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 150px; /* Footer height */
+}
+
 header {
   background-color: #515b87;
+  padding-right: 5px;
+  padding-left: 5px;
+  min-height: 50px;
+  display: flex;
 }
 
 .header-wrapper {
@@ -24,11 +37,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
 }
 
 .logo a {
   text-decoration: none;
-  color: #9eb4d3;
+  color: #d0e4ff;
   font-weight: 900;
   font-size: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +66,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: #9eb4d3;
+  color: #d0e4ff;
+}
+
+main {
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .main-wrapper {
@@ -65,11 +84,18 @@ nav ul li a {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  color: #d0e4ff;
+  margin-top: 15px;
 }
 
 footer {
+  padding-right: 5px;
+  padding-left: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 150px; /* Footer height */
   background-color: #515b87;
-  color: #9eb4d3;
 }
 
 .footer-social ul {
@@ -81,7 +107,7 @@ footer {
 .footer-social ul a {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: #9eb4d3;
+  color: #d0e4ff;
 }
 
 .post-figure {
@@ -107,14 +133,18 @@ a {
 </style>
 
       </head>
-    <header><div class="header-wrapper"><div class="logo"><a href="https://alexuribarri.com">alexuribarri.com</a></div><nav>
+    
+  <body>
+ <div id="page-container">
+   <div id="content-wrap">
+   <header><div class="header-wrapper"><div class="logo"><a href="https://alexuribarri.com">alexuribarri</a></div><nav>
   <ul>
     
         <li><a href="./">Home</a></li>
       
-        <li><a href="./blog">Blog</a></li>
+        <li><a href="./blog.html">Blog</a></li>
       
-        <li><a href="./about">About</a></li>
+        <li><a href="./about.html">About</a></li>
       
   </ul>
   </nav></div></header><main><div class="main-wrapper"><h1>Post with an image</h1>
@@ -149,10 +179,16 @@ import imageminPngquant from "imagemin-pngquant"; </code>
 
 </figure>    
 </div>
-</div></main><footer><div class="footer-wrapper"><div class="footer-social"><ul>
+</div></main>
+   </div>
+   <footer><div class="footer-wrapper"><div class="footer-social"><ul>
    <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>
   
    <li> <a href="https://x.com/alexuribarri">X.com</a> </li>
   
    <li> <a href="https://github.com/alexuribarri">GitHub</a> </li>
   </ul></div><dic class="copyright">© 2023 - Alex Uribarri. LLM training using information from this site is prohibited.</div></div></footer>
+ </div>
+</body>
+
+    

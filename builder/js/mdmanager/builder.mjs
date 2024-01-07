@@ -4,6 +4,7 @@ import { writer } from "../../writer.mjs";
 import { header } from "../../comp/header.mjs";
 import { blogroll } from "./blogroll.mjs";
 import { mainHtml } from "../../comp/main.mjs";
+import { body } from "../../comp/body.mjs";
 
 export function builder(posts) {
   for (const post of posts) {
@@ -20,7 +21,7 @@ export function builder(posts) {
     const headHtml = head(title, meta);
     const headerHtml = header();
     const footerHtml = footer();
-    const content = headHtml + headerHtml + mainHtml(main) + footerHtml;
+    const content = headHtml + body(headerHtml, mainHtml(main), footerHtml);
 
     //if post there will be ceated a folder, ir page, no folder will be created
     if (publish === "Yes" && type === "Post") {
