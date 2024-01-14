@@ -1,47 +1,52 @@
 import fs from "fs/promises";
 import { builder } from "./js/mdmanager/builder.mjs";
-
-import imagemin from "imagemin";
-import imageminJpegtran from "imagemin-jpegtran";
-import imageminPngquant from "imagemin-pngquant";
-import Jimp from "jimp";
+import { optimizeImages } from "./js/mdmanager/optimizeImages.mjs";
 
 //processFiles reads the contents of the drafts folder and converts them to html
 async function processFiles() {
   try {
+    // reading drafts folder
     const drafts = await fs.readdir("./drafts/");
 
+    //creating array for posts
     const posts = [];
 
+    //listing every draft post or page
     for (const draft of drafts) {
-      //listing all images files
+      //reading all files within the post ot page folder
       const allDraftFiles = await fs.readdir(`./drafts/${draft}`);
 
-      async function optimizeImages() {
-        await Promise.all(
-          allDraftFiles.map(async (file) => {
-            console.log(process.cwd() + file);
-            if (file.endsWith(".jpg") || file.endsWith(".png")) {
-              await imagemin([`./drafts/${draft}/${file}`], {
-                destination: "../pages/dist/",
-                plugins: [
-                  imageminJpegtran(),
-                  imageminPngquant({
-                    quality: [0.6, 0.8],
-                  }),
-                ],
-              });
-              const image = await Jimp.read(`../pages/dist/${file}`);
+      //reading image files within the image folder
+      const allDraftImages = await fs.readdir(
+        `./drafts/${draft}/${draft}-images`
+      );
 
-              await image.resize(800, Jimp.AUTO); // resize to max 800px
+      //reading metada file for the post or page
 
-              await image.write(`../pages/dist/${file}`);
-            }
-          })
-        );
-      }
+      const metaData = JSON.parse(
+        await fs.readFile(`./drafts/${draft}/${draft}.json`)
+      );
 
-      optimizeImages();
+      //checking  dist folder structure. creating if folders
+      //does not exist. To create the folder structure,
+      // read the metaData.path and create folders is necessary
+      // first check if there's any additional folder
+      // in the path (anything after "./"). If it is only "./" don't create anything.
+
+      // the folder structure include the images folder and the files folder
+
+      const path = metaData.path.split("/").slice(0, -1).join("/");
+      await fs.mkdir(`../pages/dist/${path}`, { recursive: true });
+      await fs.mkdir(`../pages/dist/${path}/${draft}-images/`, {
+        recursive: true,
+      });
+      await fs.mkdir(`../pages/dist/${path}/${draft}-files/`, {
+        recursive: true,
+      });
+
+      //sending images to be optimized
+
+      optimizeImages(allDraftImages, draft, path);
 
       const html = await fs.readFile(`./drafts/${draft}/${draft}.html`, "utf8");
 
@@ -50,8 +55,7 @@ async function processFiles() {
       const folderName = draft;
 
       const stats = await fs.stat(`./drafts/${draft}/${draft}.html`);
-      const metaStream = await fs.readFile(`./drafts/${draft}/${draft}.json`);
-      const metaData = JSON.parse(metaStream);
+
       posts.push({
         metaData,
         folderName,

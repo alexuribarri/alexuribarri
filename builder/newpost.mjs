@@ -62,6 +62,12 @@ inquirer.prompt(questions).then((answers) => {
 
   if (!fs.existsSync(draftFolder)) {
     fs.mkdirSync(draftFolder);
+    fs.mkdirSync(
+      draftFolder + `${answers.filename.replace(".html", "")}-images/`
+    );
+    fs.mkdirSync(
+      draftFolder + `${answers.filename.replace(".html", "")}-files/`
+    );
   }
 
   // post projects (drafts) file creation. This is only for drafts as the pubblished path is described in the
@@ -110,11 +116,11 @@ inquirer.prompt(questions).then((answers) => {
   <div class="main-wrapper"></div>
 </main>
 `;
-
+  // writing metadata file.
   fs.writeFileSync(metadataFile, JSON.stringify(metadata));
-
   const contentFile = draftFolder + answers.filename;
 
+  // writing content file
   fs.writeFileSync(contentFile, content);
 
   console.log("Files created successfully!");

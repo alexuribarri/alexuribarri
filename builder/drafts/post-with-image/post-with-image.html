@@ -27,7 +27,10 @@
       <p>I will use this post to test the ability to add images to posts:</p>
       <div class="post-figure">
         <figure>
-          <img src="./20180201_072252.jpg" alt="Dnipro, Ukraine" />
+          <img
+            src="./post-with-image-images/20180201_072252.jpg"
+            alt="Dnipro, Ukraine"
+          />
           <figcaption>
             A flight over mouth of a Dnipro river and Black Sea
           </figcaption>
@@ -60,12 +63,59 @@
       </p>
       <div class="post-figure">
         <figure>
-          <img src="./cls-problem.png" alt="CLS Problem" height="300px" />
+          <img
+            src="./post-with-image-images/cls-problem.png"
+            alt="CLS Problem"
+            height="300px"
+          />
           <figcaption>
             Problem with the CLS after uploading the site update to the hosting
           </figcaption>
         </figure>
       </div>
+      <h2>Update 14th January 2024</h2>
+      <p>
+        Added the ability to add watermatk to images following this
+        <a
+          href="https://dev.to/skipperhoa/create-image-watermark-using-nodejs-23n3"
+          target="_blank"
+          rel="noopener noreferrer"
+          >tutorial.</a
+        >
+      </p>
+      <p>
+        <code>
+          const image = await Jimp.read(`../pages/dist/${file}`); <br />
+          const logo = await Jimp.read("./static/logo.png");<br />
+
+          await image.resize(800, Jimp.AUTO); // resize to max 800px <br />
+          await logo.resize(80, Jimp.AUTO); // resize to max 800px <br />
+
+          const X = 10; <br />
+          const Y = 10; <br />
+          image.composite(logo, X, Y, [ { mode: Jimp.BLEND_SCREEN,
+          opacitySource: 0.1, opacityDest: 1, }, ]); <br />
+          await image.write(`../pages/dist/${file}`);
+        </code>
+      </p>
+      <p>
+        As you can see from the images in this page, watermarks are alreade
+        incorporated to the images.
+      </p>
+      <h3>Updated folder structure</h3>
+      I also updated folder structure, creating separate image folder and file folder for each and every post or article. I still need to resolve some issues with path as I see some "/./" in the middle that shouldn't be there (surprisingly, everything works anyways)
+
+      <div class="post-figure">
+        <figure>
+          <img
+            src="./post-with-image-images/problem-with-path.png"
+            alt="pronlem with path"
+            height="50px"
+          />
+          <figcaption>
+           I need to review the above "/./" additional path part...
+          </figcaption>
+        </figure>
     </div>
   </div>
 </main>
