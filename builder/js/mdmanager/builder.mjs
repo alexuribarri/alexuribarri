@@ -19,7 +19,7 @@ export function builder(posts) {
 
     const main = post.html;
     const headHtml = head(title, meta);
-    const headerHtml = header();
+    const headerHtml = header(path);
     const footerHtml = footer();
     const content = headHtml + body(headerHtml, mainHtml(main), footerHtml);
 

@@ -57,7 +57,6 @@ const questions = [
 ];
 
 inquirer.prompt(questions).then((answers) => {
-  //const folderPath = answers.path;
   const draftFolder = "./drafts/" + answers.filename.replace(".html", "") + "/";
 
   if (!fs.existsSync(draftFolder)) {
@@ -68,6 +67,13 @@ inquirer.prompt(questions).then((answers) => {
     fs.mkdirSync(
       draftFolder + `${answers.filename.replace(".html", "")}-files/`
     );
+
+    //   function searchFiles(folder) {
+    //     fs.readdir(folder, (err, files) => {
+    //       console.log(files);
+    //     });
+    //   }
+    //   searchFiles("./drafts/");
   }
 
   // post projects (drafts) file creation. This is only for drafts as the pubblished path is described in the
