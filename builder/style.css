@@ -140,3 +140,8 @@ h6 {
 a {
   color: #00a170;
 }
+
+photo-gallery {
+  margin-right: auto;
+  margin-left: auto;
+}

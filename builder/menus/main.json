@@ -2,6 +2,7 @@
   "main": [
     { "name": "Home", "url": "./" },
     { "name": "Blog", "url": "./blog.html" },
+    { "name": "Photo", "url": "./photo.html" },
     { "name": "About", "url": "./about.html" }
   ]
 }

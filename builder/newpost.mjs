@@ -113,7 +113,7 @@ inquirer.prompt(questions).then((answers) => {
 <main>
   <div
     class="main-div-full hero-title"
-    style="background-image: url(./atlantic_boat.jpg)"
+    style="background-image: url(../atlantic_boat.jpg)"
   >
     <div class="main-wrapper">
       <h1 class="h1-hero-title">${answers.title}</h1>

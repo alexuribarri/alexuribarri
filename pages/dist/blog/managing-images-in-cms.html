@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, maximum-scale=5">
 
-        <title>Alex's Uribarri Blog</title>
+        <title>Managing images in CMS</title>
 
-        <meta name="description" content="This is a collection of my blog posts">
+        <meta name="description" content="How to better manage images in a site: connect them to the post or have a generañ media repository?">
 
         <style>body {
   margin: 0;
@@ -159,16 +159,20 @@ photo-gallery {
 </style>
 
       </head>
-    <header><div class="header-wrapper"><div class="logo"><a href="https://alexuribarri.com">alexuribarri</a></div><nav>
+    
+  <body>
+ <div id="page-container">
+   <div id="content-wrap">
+   <header><div class="header-wrapper"><div class="logo"><a href="https://alexuribarri.com">alexuribarri</a></div><nav>
   <ul>
     
-          <li><a href="./">Home</a></li>
+          <li><a href=".././">Home</a></li>
         
-          <li><a href="./blog.html">Blog</a></li>
+          <li><a href=".././blog.html">Blog</a></li>
         
-          <li><a href="./photo.html">Photo</a></li>
+          <li><a href=".././photo.html">Photo</a></li>
         
-          <li><a href="./about.html">About</a></li>
+          <li><a href=".././about.html">About</a></li>
         
   </ul>
 </nav></div></header><!-- .main-wrapper {
@@ -189,18 +193,55 @@ photo-gallery {
 <main>
   <div
     class="main-div-full hero-title"
-    style="background-image: url(./atlantic_boat.jpg)"
+    style="background-image: url(../atlantic_boat.jpg)"
   >
     <div class="main-wrapper">
-      <h1 class="h1-hero-title">Recent posts</h1>
+      <h1 class="h1-hero-title">Managing images in CMS</h1>
     </div>
   </div>
-  <div class="main-wrapper"></div>
+  <div class="main-wrapper">
+    <p>
+      I’m confronted with a dilemma: how to manage images in my tiny CMS. Choice
+      one is to create a single repository of images. All the images would go in
+      a single folder and this folder would have a massive database in a form of
+      a JSON file with the image properties. Option number two: create a
+      separate image folder for each and every blog post or page.
+    </p>
+    <p>
+      At this moment, I implemented the option number two, but I’m not fully
+      confident. I don’t like the idea of being in a situation where I would
+      have to load two identical files so these files could be used in different
+      posts.
+    </p>
+    <p>
+      The option one will not have such issues, as full repository of images
+      will be available from single location. The problem is the complexity of
+      implementing such setup. Files would have to be identified by their
+      respective filenames to be able to query the JSON file with picture
+      characteristics. This might lead to file corruption, inconsistent results
+      if there are files with the same names... In nutshell, a complexity that I
+      try to avoid with this tiny CMS.
+    </p>
+    <p>
+      To practice a little, I started building the photo
+      <a href="../photo.html" class="href">gallery page</a>. I want to build an
+      “image showcase” pop up web page, so if someone wants more details on
+      certain image, a pop up would be opened with added details and higher
+      resolution. This experience will help me decide which way should I take in
+      my endeavor.
+    </p>
+  </div>
 </main>
-<div class="main-wrapper"><ul></ul></div><footer><div class="footer-wrapper"><div class="footer-social"><ul>
+
+   </div>
+   <footer><div class="footer-wrapper"><div class="footer-social"><ul>
    <li> <a href="https://www.linkedin.com/in/uribarri/">LinkedIn</a> </li>
   
    <li> <a href="https://x.com/alexuribarri">X.com</a> </li>
   
    <li> <a href="https://github.com/alexuribarri">GitHub</a> </li>
   </ul></div><dic class="copyright">© 2023 - Alex Uribarri. LLM training using information from this site is prohibited.</div></div></footer>
+ </div>
+</body>
+
+    

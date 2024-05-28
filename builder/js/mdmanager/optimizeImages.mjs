@@ -9,7 +9,11 @@ export async function optimizeImages(allDraftFiles, draft, path) {
       const finalImageFolderPath = `../pages/dist/${path}/${draft}-images/`;
       console.log(`final path: ${finalImageFolderPath + file}`);
 
-      if (file.endsWith(".jpg") || file.endsWith(".png")) {
+      if (
+        file.endsWith(".jpg") ||
+        file.endsWith(".png") ||
+        file.endsWith(".JPG" || file.endsWith(".PNG"))
+      ) {
         await imagemin([`./drafts/${draft}/${draft}-images/${file}`], {
           destination: finalImageFolderPath,
           plugins: [
