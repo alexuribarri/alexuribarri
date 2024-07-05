@@ -44,6 +44,8 @@ export function blogroll(posts, main, headHtml, headerHtml, footerHtml) {
   };
 
   //writing blog page for published posts
+  //pending add the date at the beggining of the name of the post and
+  //order by the dtae of publication
   writer(
     headHtml +
       headerHtml +
