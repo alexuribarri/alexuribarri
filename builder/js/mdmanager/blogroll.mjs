@@ -24,7 +24,8 @@ export function blogroll(posts, main, headHtml, headerHtml, footerHtml) {
     // const content = headHtml + headerHtml + main + footerHtml;
 
     if (post.metaData.publish === "Yes" && post.metaData.type === "Post") {
-      const link = `<li><a href="${path}${filename}">${title}</a></li>`;
+      const dateOnly = new Date(datetime).toISOString().split("T")[0];
+      const link = `<li><a href="${path}${filename}">${dateOnly} ${title}</a></li>`;
       publishArray.push(link);
     } else if (
       post.metaData.publish === "No" &&

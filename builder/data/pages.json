@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1",
+    "title": "Alex Uribarri",
+    "category": "Technology",
+    "meta": "Personal website of Alex Uribarri",
+    "datetime": "2024-01-07T20:55:10.909Z",
+    "filename": "index.html",
+    "path": "./",
+    "type": "Page",
+    "publish": "Yes"
+  },
+  {
+    "id": "2",
+    "title": "About",
+    "category": "Economy",
+    "meta": "Page about myself and this website",
+    "datetime": "2023-12-10T14:08:23.545Z",
+    "filename": "about.html",
+    "path": "./",
+    "type": "Page",
+    "publish": "Yes"
+  },
+  {
+    "id": "3",
+    "title": "Alex's Uribarri Blog",
+    "category": "Economy",
+    "meta": "This is a collection of my blog posts",
+    "datetime": "2023-12-09T23:09:08.523Z",
+    "filename": "blog.html",
+    "path": "./",
+    "type": "Page",
+    "publish": "No"
+  },
+  {
+    "id": "4",
+    "title": "Creating CSS styles",
+    "category": "Technology",
+    "meta": "Step my step information on how I'm creating the CSS for the site",
+    "datetime": "2024-01-02T17:28:14.545Z",
+    "filename": "creating-css.html",
+    "path": "./blog/",
+    "type": "Post",
+    "publish": "Yes"
+  },
+  {
+    "id": "5",
+    "title": "Managing images in CMS",
+    "category": "Nautica CMS",
+    "meta": "How to better manage images in a site: connect them to the post or have a generañ media repository?",
+    "datetime": "2024-05-28T20:05:07.809Z",
+    "filename": "managing-images-in-cms.html",
+    "path": "./blog/",
+    "type": "Post",
+    "publish": "Yes"
+  },
+  {
+    "id": "6",
+    "title": "My minimalist CMS",
+    "category": "Technology",
+    "meta": "Reasons why a minimalist approach to a personal website is actually better. Serving lightweight, curated site focuses on the content and not on the decoration.",
+    "datetime": "2023-12-27T20:43:14.453Z",
+    "filename": "my-minimalist-CMS.html",
+    "path": "./blog/",
+    "type": "Post",
+    "publish": "Yes"
+  },
+  {
+    "id": "7",
+    "title": "My photos",
+    "category": "Economy",
+    "meta": "My personal photo gallery",
+    "datetime": "2024-05-11T09:43:22.305Z",
+    "filename": "photo.html",
+    "path": "./",
+    "type": "Page",
+    "publish": "Yes"
+  },
+  {
+    "id": "8",
+    "title": "Post AGI voting society",
+    "category": "Future",
+    "meta": "In this post Im theorizing about the future of humanity after Artificial General Inteligence becomes reality",
+    "datetime": "2024-05-31T21:11:23.887Z",
+    "filename": "post-agi-voting-society.html",
+    "path": "./blog/",
+    "type": "Post",
+    "publish": "Yes"
+  },
+  {
+    "id": "9",
+    "title": "Post with image",
+    "category": "Technology",
+    "meta": "This post is being used to build the image capability",
+    "datetime": "2023-12-29T20:24:13.134Z",
+    "filename": "post-with-image.html",
+    "path": "./blog/",
+    "type": "Post",
+    "publish": "Yes"
+  }
+]
