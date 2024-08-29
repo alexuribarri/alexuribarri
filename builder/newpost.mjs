@@ -133,7 +133,11 @@ inquirer.prompt(questions).then((answers) => {
       <h1 class="h1-hero-title">${answers.title}</h1>
     </div>
   </div>
-  <div class="main-wrapper"></div>
+  <div class="main-wrapper">
+  <article>
+  <p>Published ${currentDateTime}</p>
+  </article>
+  </div>
 </main>
 `;
   // writing metadata file.
