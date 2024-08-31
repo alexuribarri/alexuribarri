@@ -9,7 +9,9 @@ The project consist of two parts:
 
 ## How to start
 
+./builder is your "backend", use it to write posts, create pages, load files and more
 In the ./builder folder, edit config.json file with details of your blog
+Add favicon.ico file into ./builder folder
 
 ## Builder Structure
 

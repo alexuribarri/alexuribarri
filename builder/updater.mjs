@@ -5,6 +5,15 @@ import { optimizeImages } from "./js/mdmanager/optimizeImages.mjs";
 //processFiles reads the contents of the drafts folder and converts them to html
 async function processFiles() {
   try {
+    //reading builder folder to find if there's a favicon.ico file
+    const checkFavicon = await fs.readdir("./");
+    if (checkFavicon.includes("favicon.ico")) {
+      await fs.copyFile("./favicon.ico", "../pages/dist/favicon.ico");
+    } else {
+      console.log("No favicon.ico file found in the root directory.");
+    }
+
+    //reading builder folder to find if there's a robots.txt file
     // reading drafts folder
     const drafts = await fs.readdir("./drafts/");
 
