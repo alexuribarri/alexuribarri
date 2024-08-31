@@ -16,12 +16,18 @@ export function builder(posts) {
     const path = post.metaData.path;
     const type = post.metaData.type;
     const publish = post.metaData.publish;
-
+    const img = post.metaData.img;
     const main = post.html;
     const headHtml = head(title, meta);
     const headerHtml = header(path);
     const footerHtml = footer();
-    const content = headHtml + body(headerHtml, mainHtml(main), footerHtml);
+    const content =
+      headHtml +
+      body(
+        headerHtml,
+        mainHtml(main, type, title, datetime, category, img),
+        footerHtml
+      );
 
     //if post there will be ceated a folder, ir page, no folder will be created
     if (publish === "Yes" && type === "Post") {

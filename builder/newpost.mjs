@@ -107,6 +107,7 @@ inquirer.prompt(questions).then((answers) => {
     path: answers.path,
     type: answers.type,
     publish: answers.publish,
+    img: "atlantic_boat.jpg",
   };
 
   const content = `<!-- .main-wrapper {
