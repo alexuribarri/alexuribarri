@@ -124,7 +124,9 @@ inquirer.prompt(questions).then((answers) => {
     margin-right: 5px;
     margin-left: 5px;
   } -->
-
+  <!-- For blog posts, delete everything and start writing the article using HTML code, no initial tags are required -->
+  <!-- To update background image, update JSON file located in this folder accordingly. -->
+  <!-- Images located in the image folder will be automatically saved into img folder of the published site with the rest of the images -->
 <main>
   <div
     class="main-div-full hero-title"
@@ -136,7 +138,7 @@ inquirer.prompt(questions).then((answers) => {
   </div>
   <div class="main-wrapper">
   <article>
-  <p>Published ${currentDateTime}</p>
+ 
   </article>
   </div>
 </main>

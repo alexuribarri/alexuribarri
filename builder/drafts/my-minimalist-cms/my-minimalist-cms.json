@@ -6,5 +6,6 @@
   "filename": "my-minimalist-CMS.html",
   "path": "./blog/",
   "type": "Post",
-  "publish": "Yes"
+  "publish": "Yes",
+  "img": "san_sebastian.jpg"
 }

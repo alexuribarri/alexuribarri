@@ -1,121 +1,87 @@
-<!-- .main-wrapper {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .main-div-full {
-    width: 100%;
-  }
-  
-  .main-div-part {
-    margin-right: 5px;
-    margin-left: 5px;
-  } -->
+<p>I will use this post to test the ability to add images to posts:</p>
+<div class="post-figure">
+  <figure>
+    <img src="/img/20180201_072252.jpg" alt="Dnipro, Ukraine" />
+    <figcaption>A flight over mouth of a Dnipro river and Black Sea</figcaption>
+  </figure>
+</div>
 
-<main>
-  <div
-    class="main-div-full hero-title"
-    style="background-image: url(./post-with-image-images/20180201_072252.jpg)"
+<h2>Update December 29th 2023</h2>
+<p>
+  So far I managed to do the following in regards to images: when writer decides
+  to add an image, they should copy it to the folder of the draft article. When
+  the upgrade.mjs script is executed, then all the images are minimized using
+  imagemin and resized to 800px using jimp and then moved to the root folder of
+  the website.
+</p>
+<code>
+  import imagemin from "imagemin";<br />
+  import imageminJpegtran from "imagemin-jpegtran";<br />
+  import imageminPngquant from "imagemin-pngquant";
+</code>
+
+<p>
+  Next steps would probably require the creation of an image database, where all
+  the images have their characteristics stores, like location, descritpions,
+  etc.. Will keep you posted
+</p>
+<h2>New problems...</h2>
+<p>
+  OK, after uploading the files to web hosting, the Lighouse results are
+  terrible due to CLS (Cumulative Layout Shift)
+</p>
+<div class="post-figure">
+  <figure>
+    <img src="/img/cls-problem.png" alt="CLS Problem" height="300px" />
+    <figcaption>
+      Problem with the CLS after uploading the site update to the hosting
+    </figcaption>
+  </figure>
+</div>
+<h2>Update 14th January 2024</h2>
+<p>
+  Added the ability to add watermatk to images following this
+  <a
+    href="https://dev.to/skipperhoa/create-image-watermark-using-nodejs-23n3"
+    target="_blank"
+    rel="noopener noreferrer"
+    >tutorial.</a
   >
-    <div class="main-wrapper">
-      <h1 class="h1-hero-title">Post with an image</h1>
-    </div>
-  </div>
-  <div class="main-wrapper">
-    <div class="main-div-part">
-      <p>I will use this post to test the ability to add images to posts:</p>
-      <div class="post-figure">
-        <figure>
-          <img
-            src="./post-with-image-images/20180201_072252.jpg"
-            alt="Dnipro, Ukraine"
-          />
-          <figcaption>
-            A flight over mouth of a Dnipro river and Black Sea
-          </figcaption>
-        </figure>
-      </div>
+</p>
+<p>
+  <code>
+    const image = await Jimp.read(`../pages/dist/${file}`); <br />
+    const logo = await Jimp.read("./static/logo.png");<br />
 
-      <h2>Update December 29th 2023</h2>
-      <p>
-        So far I managed to do the following in regards to images: when writer
-        decides to add an image, they should copy it to the folder of the draft
-        article. When the upgrade.mjs script is executed, then all the images
-        are minimized using imagemin and resized to 800px using jimp and then
-        moved to the root folder of the website.
-      </p>
-      <code>
-        import imagemin from "imagemin";<br />
-        import imageminJpegtran from "imagemin-jpegtran";<br />
-        import imageminPngquant from "imagemin-pngquant";
-      </code>
+    await image.resize(800, Jimp.AUTO); // resize to max 800px <br />
+    await logo.resize(80, Jimp.AUTO); // resize to max 800px <br />
 
-      <p>
-        Next steps would probably require the creation of an image database,
-        where all the images have their characteristics stores, like location,
-        descritpions, etc.. Will keep you posted
-      </p>
-      <h2>New problems...</h2>
-      <p>
-        OK, after uploading the files to web hosting, the Lighouse results are
-        terrible due to CLS (Cumulative Layout Shift)
-      </p>
-      <div class="post-figure">
-        <figure>
-          <img
-            src="./post-with-image-images/cls-problem.png"
-            alt="CLS Problem"
-            height="300px"
-          />
-          <figcaption>
-            Problem with the CLS after uploading the site update to the hosting
-          </figcaption>
-        </figure>
-      </div>
-      <h2>Update 14th January 2024</h2>
-      <p>
-        Added the ability to add watermatk to images following this
-        <a
-          href="https://dev.to/skipperhoa/create-image-watermark-using-nodejs-23n3"
-          target="_blank"
-          rel="noopener noreferrer"
-          >tutorial.</a
-        >
-      </p>
-      <p>
-        <code>
-          const image = await Jimp.read(`../pages/dist/${file}`); <br />
-          const logo = await Jimp.read("./static/logo.png");<br />
+    const X = 10; <br />
+    const Y = 10; <br />
+    image.composite(logo, X, Y, [ { mode: Jimp.BLEND_SCREEN, opacitySource: 0.1,
+    opacityDest: 1, }, ]); <br />
+    await image.write(`../pages/dist/${file}`);
+  </code>
+</p>
+<p>
+  As you can see from the images in this page, watermarks are alreade
+  incorporated to the images.
+</p>
+<h3>Updated folder structure</h3>
+I also updated folder structure, creating separate image folder and file folder
+for each and every post or article. I still need to resolve some issues with
+path as I see some "/./" in the middle that shouldn't be there (surprisingly,
+everything works anyways)
 
-          await image.resize(800, Jimp.AUTO); // resize to max 800px <br />
-          await logo.resize(80, Jimp.AUTO); // resize to max 800px <br />
-
-          const X = 10; <br />
-          const Y = 10; <br />
-          image.composite(logo, X, Y, [ { mode: Jimp.BLEND_SCREEN,
-          opacitySource: 0.1, opacityDest: 1, }, ]); <br />
-          await image.write(`../pages/dist/${file}`);
-        </code>
-      </p>
-      <p>
-        As you can see from the images in this page, watermarks are alreade
-        incorporated to the images.
-      </p>
-      <h3>Updated folder structure</h3>
-      I also updated folder structure, creating separate image folder and file folder for each and every post or article. I still need to resolve some issues with path as I see some "/./" in the middle that shouldn't be there (surprisingly, everything works anyways)
-
-      <div class="post-figure">
-        <figure>
-          <img
-            src="./post-with-image-images/problem-with-path.png"
-            alt="pronlem with path"
-            height="50px"
-          />
-          <figcaption>
-           I need to review the above "/./" additional path part...
-          </figcaption>
-        </figure>
-    </div>
-  </div>
-</main>
+<div class="post-figure">
+  <figure>
+    <img
+      src="/img/problem-with-path.png"
+      alt="pronlem with path"
+      height="50px"
+    />
+    <figcaption>
+      I need to review the above "/./" additional path part...
+    </figcaption>
+  </figure>
+</div>

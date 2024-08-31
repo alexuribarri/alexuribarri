@@ -6,5 +6,6 @@
   "filename": "post-with-image.html",
   "path": "./blog/",
   "type": "Post",
-  "publish": "Yes"
+  "publish": "Yes",
+  "img": "20180201_072252.jpg"
 }

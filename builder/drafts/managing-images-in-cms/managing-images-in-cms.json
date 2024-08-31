@@ -6,5 +6,6 @@
   "filename": "managing-images-in-cms.html",
   "path": "./blog/",
   "type": "Post",
-  "publish": "Yes"
+  "publish": "Yes",
+  "img": "atlantic_boat.jpg"
 }

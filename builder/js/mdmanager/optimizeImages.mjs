@@ -6,7 +6,7 @@ import Jimp from "jimp";
 export async function optimizeImages(allDraftFiles, draft, path) {
   await Promise.all(
     allDraftFiles.map(async (file) => {
-      const finalImageFolderPath = `../pages/dist/${path}/${draft}-images/`;
+      const finalImageFolderPath = `../pages/dist/img/`;
       console.log(`final path: ${finalImageFolderPath + file}`);
 
       if (
